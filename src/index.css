@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body {
+    @apply bg-cream font-sans text-ink antialiased;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  h1, h2, h3 { @apply font-display tracking-tight text-brand; }
+  button, a, input, select, textarea { @apply outline-none focus-visible:ring-2 focus-visible:ring-accent/70; }
+}
+
+@layer components {
+  .card { @apply rounded-card bg-white p-4 shadow-soft; }
+  .tap { @apply min-h-[44px] min-w-[44px]; }
+  .input {
+    @apply tap w-full rounded-2xl border border-brand/15 bg-white px-4 text-base text-ink
+           placeholder:text-muted/70 focus:border-brand;
+  }
+  .label { @apply mb-1 block text-sm font-medium text-brand; }
+  .chip {
+    @apply inline-flex min-h-[36px] items-center gap-1.5 rounded-full bg-brand-soft px-3 text-sm font-medium text-brand;
+  }
+}
+
+/* Espaço para a barra inferior no mobile */
+.has-bottom-nav { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
