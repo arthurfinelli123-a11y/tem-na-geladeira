@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1F4E3D" />
+    <meta name="description" content="Tem na Geladeira: sua cozinha tem os ingredientes, nossa IA tem as ideias. Receitas personalizadas com o que você já tem em casa." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tem na Geladeira — seu chef pessoal com IA</title>
+    <style>
+      body { margin: 0; background: #FAF6EF; }
+      .splash { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; font-family: Inter, system-ui, sans-serif; color: #1F4E3D; }
+      .splash svg { animation: pulse 1.4s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="splash" role="status" aria-live="polite">
+        <svg width="72" height="72" viewBox="0 0 48 48" aria-hidden="true">
+          <rect width="48" height="48" rx="14" fill="#1F4E3D" />
+          <path d="M10 25h28c0 7.7-6.3 14-14 14s-14-6.3-14-14z" fill="#FAF6EF" />
+          <path d="M24 22c-5-1-7-5-6-9 5 0 8 3 6 9z" fill="#A8D5BA" />
+          <path d="M34 7l1.6 4.4L40 13l-4.4 1.6L34 19l-1.6-4.4L28 13l4.4-1.6z" fill="#F59E5B" />
+        </svg>
+        <span>Preparando a cozinha…</span>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
